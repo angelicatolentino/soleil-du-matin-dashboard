@@ -2,7 +2,14 @@
 
 An executive sales dashboard built entirely in Excel for a fictional coffee and bakery brand with three New York locations. This project earned **Analytics Champion (Top 1)** in the DataSense Analytics MS Excel Data Analyst Masterclass, Batch 04.
 
-![Dashboard preview](images/dashboard.png)
+![Dashboard preview](soleil%20du%20matin%20dashboard.png)
+
+## Recognition
+
+Analytics Champion (Top 1), MS Excel Data Analyst Masterclass, Batch 04
+DataSense Analytics, September 2026
+
+![Analytics Champion award](TOP%20PERFORMERS.jpg)
 
 ## Business Questions
 
@@ -42,14 +49,9 @@ An executive sales dashboard built entirely in Excel for a fictional coffee and 
 
 - Case study PDF: the full write-up of the project
 - Dashboard preview and award images
-- `code/`: DAX measures and VBA macros
 - Analytics Champion certificate
-
-## How to Use
-
-1. Download the `.xlsm` file and open it in Excel (desktop version, with macros enabled).
-2. Use the month and store slicers at the top to filter the dashboard.
-3. Use the reset button to clear all filters.
+- `dax_measures.dax`: DAX measures
+- `vba_macros.bas`: VBA macros for the slicer reset buttons
 
 ## Skills Demonstrated
 
