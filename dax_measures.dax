@@ -1,0 +1,73 @@
+// Soleil Du Matin: Sales Performance Dashboard
+// DAX measures built in Power Pivot on the table 'Coffee Shop Sales'.
+// Each measure below is a separate measure in the model.
+
+// ---------- Core measures ----------
+
+Total Revenue = SUM('Coffee Shop Sales'[Revenue])
+
+Total Transactions = COUNTROWS('Coffee Shop Sales')
+
+AOV = DIVIDE([Total Revenue], [Total Transactions])
+
+Avg Unit Price = AVERAGE('Coffee Shop Sales'[unit_price])
+
+Category % =
+DIVIDE(
+    [Total Revenue],
+    CALCULATE([Total Revenue], ALL('Coffee Shop Sales'[product_category]))
+)
+
+Store Revenue % =
+DIVIDE(
+    [Total Revenue],
+    CALCULATE([Total Revenue], ALL('Coffee Shop Sales'[store_location]))
+)
+
+// ---------- Time and ranking measures ----------
+
+// Cumulative revenue up to the selected month
+Running Total =
+CALCULATE(
+    [Total Revenue],
+    FILTER(
+        ALL('Coffee Shop Sales'[MonthNumber]),
+        'Coffee Shop Sales'[MonthNumber] <= MAX('Coffee Shop Sales'[MonthNumber])
+    )
+)
+
+// Transaction count of the busiest hour
+Peak Hour Txns =
+MAXX(
+    VALUES('Coffee Shop Sales'[Hour]),
+    CALCULATE([Total Transactions])
+)
+
+// Name of the highest revenue product under the current slicers
+Top Product =
+MAXX(
+    TOPN(
+        1,
+        VALUES('Coffee Shop Sales'[product_detail]),
+        CALCULATE([Total Revenue])
+    ),
+    'Coffee Shop Sales'[product_detail]
+)
+
+// ---------- Shadow measures (used by the back-end analysis pivots) ----------
+
+Shadow Total Rev = [Total Revenue]
+
+Shadow Total Transactions = [Total Transactions]
+
+Shadow AOV = [AOV]
+
+Shadow Peak Hour = [Peak Hour Txns]
+
+Shadow Top Product = [Top Product Monthly Rev]
+
+// ---------- Still to add from the workbook ----------
+// MoM Growth %
+// Peak Hour
+// Running Avg
+// Top Product Monthly Rev
