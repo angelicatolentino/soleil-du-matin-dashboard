@@ -38,19 +38,12 @@ An executive sales dashboard built entirely in Excel for a fictional coffee and 
 - Consistent $K and $M number formatting across the whole dashboard
 - Brand name, logo, and style guide created from scratch
 
-## Repository Contents
+## Files in This Repository
 
-```
-soleil-du-matin-dashboard/
-  README.md
-  Soleil_Du_Matin_Dashboard.xlsm
-  case-study/Soleil_Du_Matin_Case_Study.pdf
-  images/dashboard.png
-  code/
-    power_query.m
-    dax_measures.dax
-    vba_macros.bas
-```
+- Case study PDF: the full write-up of the project
+- Dashboard preview and award images
+- `code/`: DAX measures and VBA macros
+- Analytics Champion certificate
 
 ## How to Use
 
