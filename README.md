@@ -68,4 +68,4 @@ Excel, Power Query, Power Pivot, DAX, PivotCharts, VBA, dashboard design, data s
 Business Intelligence Analyst | Data Analyst
 Excel | Power Query | Power Pivot | DAX | VBA | SQL | Python | Power BI
 
-Connect with me on LinkedIn: add your profile link here
+Connect with me on LinkedIn: https://www.linkedin.com/in/cristine-angelica-marie-serrano-tolentino-58441a236/
